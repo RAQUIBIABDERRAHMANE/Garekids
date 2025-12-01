@@ -1,0 +1,79 @@
+version: '3.8'
+
+services:
+  # MySQL Database
+  db:
+    image: mysql:8.0
+    container_name: takecare_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-root_password_2025}
+      MYSQL_DATABASE: ${DB_NAME:-care}
+      MYSQL_USER: ${DB_USER:-caredb}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-@@12raquibi}
+    ports:
+      - "${DB_PORT:-3306}:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - takecare_network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+  # PHP Apache Web Server
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: takecare_web
+    restart: always
+    ports:
+      - "${WEB_PORT:-8076}:80"
+    volumes:
+      - ./uploads:/var/www/html/uploads
+      - ./logs:/var/www/html/logs
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - DB_HOST=db
+      - DB_NAME=${DB_NAME:-care}
+      - DB_USER=${DB_USER:-caredb}
+      - DB_PASSWORD=${DB_PASSWORD:-@@12raquibi}
+      - ADMIN_NAME=${ADMIN_NAME:-Admin}
+      - ADMIN_EMAIL=${ADMIN_EMAIL:-admin@takecare.com}
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD:-admin123}
+      - WEB_PORT=${WEB_PORT:-8076}
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+    networks:
+      - takecare_network
+
+  # phpMyAdmin (optional - for database management)
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: takecare_phpmyadmin
+    restart: always
+    ports:
+      - "${PHPMYADMIN_PORT:-8081}:80"
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_USER: ${DB_USER:-caredb}
+      PMA_PASSWORD: ${DB_PASSWORD:-@@12raquibi}
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - takecare_network
+
+volumes:
+  db_data:
+    driver: local
+
+networks:
+  takecare_network:
+    driver: bridge

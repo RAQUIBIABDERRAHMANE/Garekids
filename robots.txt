@@ -1,0 +1,22 @@
+# TakeCare Childcare - Robots.txt
+# http://gardekids.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Disallow admin area
+Disallow: /admin/
+Disallow: /api/
+Disallow: /config/
+Disallow: /db/
+Disallow: /includes/
+Disallow: /lang/
+
+# Allow assets
+Allow: /assets/
+
+# Sitemap location
+Sitemap: http://gardekids.com/sitemap.xml
+
+# Crawl delay (optional - be nice to servers)
+Crawl-delay: 1
