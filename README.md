@@ -24,7 +24,7 @@ docker-compose up -d
 ### Access the website
 - **Website:** http://localhost:8080
 - **phpMyAdmin:** http://localhost:8081
-- **Admin Login:** admin@takecare.com / admin123
+- **Admin Login:** admin@gardekids.com / admin123
 
 ## 📋 Features
 
