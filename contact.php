@@ -12,7 +12,7 @@ $page_keywords = isset($_SESSION['lang']) && $_SESSION['lang'] === 'fr'
 
 require_once __DIR__ . '/includes/header.php'; 
 ?>
-$msg = '';
+<!-- $msg = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = trim($_POST['name'] ?? '');
     $email = trim($_POST['email'] ?? '');
@@ -31,14 +31,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $msg = 'Please complete all fields with a valid email.';
     }
 }
-?>
+?> -->
 
 <section class="bg-white rounded p-6 shadow">
   <h2 class="text-2xl font-bold">Contact</h2>
   <p class="mt-2">Call or WhatsApp for fastest response.</p>
   <div class="mt-4 flex gap-3">
-    <a href="tel:+1234567890" class="px-4 py-2 bg-amber-400 text-white rounded">Call: +1 234 567 890</a>
-    <a href="https://wa.me/1234567890" target="_blank" class="px-4 py-2 border rounded">WhatsApp</a>
+    <a href="tel:+212653788298" class="px-4 py-2 bg-amber-400 text-white rounded">Call: +212 653-788298</a>
+    <a href="https://wa.me/212653788298" target="_blank" class="px-4 py-2 border rounded">WhatsApp</a>
   </div>
 
   <div class="mt-6">

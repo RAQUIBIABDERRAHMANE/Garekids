@@ -162,8 +162,8 @@ particulier ?
 ### Exemple 2: Contact
 ```
 User: Comment puis-je vous contacter ?
-Bot: Vous pouvez nous contacter par téléphone au +1 234 567 890, via 
-WhatsApp, ou par email à hello@takecare.com. Nous sommes disponibles du 
+Bot: Vous pouvez nous contacter par téléphone au +212 653-788298, via 
+WhatsApp, ou par email à fatielbakki@gmail.com. Nous sommes disponibles du 
 lundi au vendredi de 7h à 19h. Préférez-vous un appel ou un message ?
 ```
 

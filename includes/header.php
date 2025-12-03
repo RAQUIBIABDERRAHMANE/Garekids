@@ -92,8 +92,8 @@ $current_url = $site_url . $_SERVER['REQUEST_URI'];
     "url": "<?php echo $site_url; ?>",
     "logo": "<?php echo $default_image; ?>",
     "image": "<?php echo $page_image; ?>",
-    "telephone": "+1 234 567 890",
-    "email": "hello@takecare.com",
+    "telephone": "+212 653-788298",
+    "email": "fatielbakki@gmail.com",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "US"

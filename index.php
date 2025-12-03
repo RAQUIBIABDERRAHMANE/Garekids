@@ -100,11 +100,11 @@ try {
         <?php echo $lang['hero_subtitle']; ?>
       </p>
       <div class="flex flex-wrap gap-4">
-        <a href="tel:+1234567890" class="btn-primary inline-flex items-center gap-2">
+        <a href="tel:+212653788298" class="btn-primary inline-flex items-center gap-2">
           <i class="fas fa-phone-alt"></i>
           <?php echo $lang['call_now']; ?>
         </a>
-        <a href="https://wa.me/1234567890" target="_blank" class="btn-secondary inline-flex items-center gap-2">
+        <a href="https://wa.me/212653788298" target="_blank" class="btn-secondary inline-flex items-center gap-2">
           <i class="fab fa-whatsapp"></i>
           <?php echo $lang['chat_whatsapp']; ?>
         </a>

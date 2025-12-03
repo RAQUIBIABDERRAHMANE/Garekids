@@ -55,9 +55,9 @@ SAFETY MEASURES:
 - Strict emergency protocols with immediate parent notification
 
 CONTACT:
-- Phone: +1 234 567 890
+- Phone: +212 653-788298
 - WhatsApp: Available
-- Email: hello@takecare.com
+- Email: fatielbakki@gmail.com
 - Hours: Monday to Friday, 7 AM - 7 PM
 
 Be friendly, professional, and supportive. 
@@ -67,7 +67,7 @@ FORMATTING RULES:
 - Use numbered lists (1. 2. 3.) when listing multiple services
 - Use bullet points (- or •) for features or details
 - Keep responses concise but informative (2-4 sentences or organized lists)
-- Include phone number +1 234 567 890 and email hello@takecare.com when relevant
+- Include phone number +212 653-788298 and email fatielbakki@gmail.com when relevant
 - Add line breaks between different sections for readability
 
 If asked about specific prices or exact availability, encourage them to contact us directly for personalized information.');
@@ -112,9 +112,9 @@ MESURES DE SÉCURITÉ:
 - Protocoles d\'urgence stricts avec notification immédiate des parents
 
 CONTACT:
-- Téléphone: +1 234 567 890
+- Téléphone: +212 653-788298
 - WhatsApp: Disponible
-- Email: hello@takecare.com
+- Email: fatielbakki@gmail.com
 - Horaires: Lundi au vendredi, 7h - 19h
 
 Soyez amical, professionnel et solidaire.
@@ -124,7 +124,7 @@ RÈGLES DE FORMATAGE:
 - Utilisez des listes numérotées (1. 2. 3.) pour énumérer plusieurs services
 - Utilisez des puces (- ou •) pour les caractéristiques ou détails
 - Gardez les réponses concises mais informatives (2-4 phrases ou listes organisées)
-- Incluez le téléphone +1 234 567 890 et email hello@takecare.com quand pertinent
+- Incluez le téléphone +212 653-788298 et email fatielbakki@gmail.com quand pertinent
 - Ajoutez des sauts de ligne entre différentes sections pour la lisibilité
 
 Si on vous pose des questions sur les prix exacts ou la disponibilité, encouragez-les à nous contacter directement pour des informations personnalisées.');

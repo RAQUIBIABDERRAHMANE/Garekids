@@ -30,25 +30,25 @@
         <div>
           <h3 class="text-xl font-bold mb-4" style="color: white !important;"><?php echo $lang['contact_us'] ?? 'Contact Us'; ?></h3>
           <div class="space-y-3">
-            <a href="tel:+1234567890" class="flex items-center gap-3 p-3 rounded-xl transition-all group" style="background: rgba(168, 216, 234, 0.15); color: white !important; border: 1px solid rgba(168, 216, 234, 0.2);" onmouseover="this.style.background='rgba(168, 216, 234, 0.25)'" onmouseout="this.style.background='rgba(168, 216, 234, 0.15)'">
+            <a href="tel:+212653788298" class="flex items-center gap-3 p-3 rounded-xl transition-all group" style="background: rgba(168, 216, 234, 0.15); color: white !important; border: 1px solid rgba(168, 216, 234, 0.2);" onmouseover="this.style.background='rgba(168, 216, 234, 0.25)'" onmouseout="this.style.background='rgba(168, 216, 234, 0.15)'">
               <i class="fas fa-phone text-2xl group-hover:scale-110 transition-transform" style="color: #A8D8EA;"></i>
               <div>
                 <div class="text-xs" style="color: #E8F4F8 !important;"><?php echo $lang['call_us'] ?? 'Call Us'; ?></div>
-                <div class="font-semibold" style="color: white !important;">+1 234 567 890</div>
+                <div class="font-semibold" style="color: white !important;">+212 653-788298</div>
               </div>
             </a>
-            <a href="https://wa.me/1234567890" target="_blank" class="flex items-center gap-3 p-3 rounded-xl transition-all group" style="background: rgba(181, 234, 215, 0.15); color: white !important; border: 1px solid rgba(181, 234, 215, 0.2);" onmouseover="this.style.background='rgba(181, 234, 215, 0.25)'" onmouseout="this.style.background='rgba(181, 234, 215, 0.15)'">
+            <a href="https://wa.me/212653788298" target="_blank" class="flex items-center gap-3 p-3 rounded-xl transition-all group" style="background: rgba(181, 234, 215, 0.15); color: white !important; border: 1px solid rgba(181, 234, 215, 0.2);" onmouseover="this.style.background='rgba(181, 234, 215, 0.25)'" onmouseout="this.style.background='rgba(181, 234, 215, 0.15)'">
               <i class="fab fa-whatsapp text-2xl group-hover:scale-110 transition-transform" style="color: #B5EAD7;"></i>
               <div>
                 <div class="text-xs" style="color: #E8F4F8 !important;">WhatsApp</div>
                 <div class="font-semibold" style="color: white !important;"><?php echo $lang['chat_now'] ?? 'Chat Now'; ?></div>
               </div>
             </a>
-            <a href="mailto:hello@takecare.com" class="flex items-center gap-3 p-3 rounded-xl transition-all group" style="background: rgba(255, 182, 193, 0.15); color: white !important; border: 1px solid rgba(255, 182, 193, 0.2);" onmouseover="this.style.background='rgba(255, 182, 193, 0.25)'" onmouseout="this.style.background='rgba(255, 182, 193, 0.15)'">
+            <a href="mailto:fatielbakki@gmail.com" class="flex items-center gap-3 p-3 rounded-xl transition-all group" style="background: rgba(255, 182, 193, 0.15); color: white !important; border: 1px solid rgba(255, 182, 193, 0.2);" onmouseover="this.style.background='rgba(255, 182, 193, 0.25)'" onmouseout="this.style.background='rgba(255, 182, 193, 0.15)'">
               <i class="fas fa-envelope text-2xl group-hover:scale-110 transition-transform" style="color: #FFB6C1;"></i>
               <div>
                 <div class="text-xs" style="color: #E8F4F8 !important;"><?php echo $lang['email_us'] ?? 'Email Us'; ?></div>
-                <div class="font-semibold text-sm" style="color: white !important;">hello@takecare.com</div>
+                <div class="font-semibold text-sm" style="color: white !important;">fatielbakki@gmail.com</div>
               </div>
             </a>
           </div>
