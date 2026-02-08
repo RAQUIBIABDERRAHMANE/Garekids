@@ -39,7 +39,7 @@ $lang = [
     
     // About
     'about_title' => 'About Me',
-    'about_text' => 'Hello! I\'m Jane, a certified childcare provider with over 8 years of experience caring for infants, toddlers and school-age children. My philosophy centers on safety, curiosity-led learning, and kindness. I offer a warm home environment, structured routines, nutritious snacks, and daily updates for parents.',
+    'about_text' => 'Hello! I\'m Fatimzahra, a certified childcare provider with over 8 years of experience caring for infants, toddlers and school-age children. My philosophy centers on safety, curiosity-led learning, and kindness. I offer a warm home environment, structured routines, nutritious snacks, and daily updates for parents.',
     
     // Contact
     'contact_title' => 'Get in Touch',

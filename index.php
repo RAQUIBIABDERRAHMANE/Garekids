@@ -38,8 +38,8 @@ if (empty($testimonials)) {
         [
             'parent_name' => 'Sarah M.',
             'content' => $_SESSION['lang'] === 'fr' 
-                ? 'Jane est incroyable avec nos enfants ! Ils l\'adorent et nous aussi. Très professionnel et attentionné.' 
-                : 'Jane is amazing with our kids! They love her and so do we. Very professional and caring.'
+                ? 'Fatimzahra est incroyable avec nos enfants ! Ils l\'adorent et nous aussi. Très professionnel et attentionné.' 
+                : 'Fatimazahra is amazing with our kids! They love her and so do we. Very professional and caring.'
         ],
         [
             'parent_name' => 'Michael K.',

@@ -39,7 +39,7 @@ $lang = [
     
     // À propos
     'about_title' => 'À propos de moi',
-    'about_text' => 'Bonjour ! Je suis Jane, une éducatrice certifiée avec plus de 8 ans d\'expérience dans la garde d\'enfants en bas âge et d\'enfants d\'âge scolaire. Ma philosophie se concentre sur la sécurité, l\'apprentissage par la curiosité et la gentillesse. J\'offre un environnement familial chaleureux, des routines structurées, des collations nutritives et des mises à jour quotidiennes pour les parents.',
+    'about_text' => 'Bonjour ! Je suis Fatimzahra, une éducatrice certifiée avec plus de 8 ans d\'expérience dans la garde d\'enfants en bas âge et d\'enfants d\'âge scolaire. Ma philosophie se concentre sur la sécurité, l\'apprentissage par la curiosité et la gentillesse. J\'offre un environnement familial chaleureux, des routines structurées, des collations nutritives et des mises à jour quotidiennes pour les parents.',
     
     // Contact
     'contact_title' => 'Contactez-nous',
