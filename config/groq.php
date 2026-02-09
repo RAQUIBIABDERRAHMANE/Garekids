@@ -4,7 +4,8 @@
  * Get your API key from: https://console.groq.com/keys
  */
 
-define('GROQ_API_KEY', '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'); // Replace with your actual Groq API key
+// Use environment variable or fallback to empty string
+define('GROQ_API_KEY', getenv('GROQ_API_KEY') ?: '');
 define('GROQ_API_URL', 'https://api.groq.com/openai/v1/chat/completions');
 define('GROQ_MODEL', 'openai/gpt-oss-120b');
 
