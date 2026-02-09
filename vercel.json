@@ -16,8 +16,5 @@
       "src": "/(.*)",
       "dest": "/$1.php"
     }
-  ],
-  "env": {
-    "GROQ_API_KEY": "@groq_api_key"
-  }
+  ]
 }
