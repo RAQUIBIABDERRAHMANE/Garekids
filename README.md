@@ -2,29 +2,33 @@
 
 Professional childcare website with AI-powered features, multi-language support, and admin panel.
 
-## 🚀 Quick Start with Docker
+## 🚀 Quick Start
 
-### Prerequisites
-- Docker & Docker Compose installed
+### Local Development
 
-### Start the application
+#### Windows
 ```bash
-# Make the script executable
-chmod +x start-docker.sh
+# Initialize SQLite database
+init-sqlite.bat
 
-# Run the script
-./start-docker.sh
+# Start PHP server
+php -S localhost:8000
 ```
 
-Or manually:
+#### Linux/Mac
 ```bash
-docker-compose up -d
+# Initialize SQLite database
+chmod +x init-sqlite.sh
+./init-sqlite.sh
+
+# Start PHP server
+php -S localhost:8000
 ```
 
-### Access the website
-- **Website:** http://localhost:8080
-- **phpMyAdmin:** http://localhost:8081
-- **Admin Login:** admin@gardekids.com / admin123
+### Deployment
+For deployment instructions, see [QUICKSTART_VERCEL.md](QUICKSTART_VERCEL.md)
+
+**✨ Now using SQLite** - No external database needed! Perfect for Vercel.
 
 ## 📋 Features
 
@@ -63,10 +67,9 @@ docker-compose up -d
 ## 🏗️ Tech Stack
 
 - **Backend:** PHP 8.2
-- **Database:** MySQL 8.0
+- **Database:** SQLite (perfect for Vercel!)
 - **Frontend:** HTML5, CSS3, Tailwind CSS, JavaScript
 - **AI:** Groq API (llama-3.3-70b-versatile)
-- **Containerization:** Docker & Docker Compose
 
 ## 📁 Project Structure
 
@@ -80,52 +83,35 @@ takecare/
 ├── includes/           # Header, footer components
 ├── lang/               # Language files (EN, FR)
 ├── uploads/            # User uploads (gallery)
-├── docker-compose.yml  # Docker services configuration
-├── Dockerfile          # Web container configuration
-└── start-docker.sh     # Quick start script
+├── vercel.json         # Vercel configuration
+└── VERCEL_DEPLOYMENT.md # Deployment guide
 ```
 
 ## 🔧 Configuration
 
 ### Database
-Update `config/db.php` or use environment variables:
-```php
-DB_HOST=db
-DB_NAME=care
-DB_USER=caredb
-DB_PASSWORD=@@12raquibi
+SQLite is used by default - **no configuration needed!**
+
+Database file: `db/care.db` (auto-created)
+
+Optional: Set custom path via environment variable:
+```env
+DB_PATH=/custom/path/database.db
 ```
 
 ### Groq AI
-Set your API key in `config/groq.php`:
-```php
-define('GROQ_API_KEY', 'your_api_key_here');
+Set your API key as environment variable:
+```env
+GROQ_API_KEY=your_api_key_here
 ```
+
+See [SQLITE_GUIDE.md](SQLITE_GUIDE.md) for database management details.
 
 ## 📊 Database Tables
 
 - **users** - User accounts and admin roles
 - **testimonials** - User testimonials with AI analysis
-- **gallery** - Image gallery with captions
-
-## 🐳 Docker Commands
-
-```bash
-# Start containers
-docker-compose up -d
-
-# Stop containers
-docker-compose down
-
-# View logs
-docker-compose logs -f web
-
-# Access web container
-docker exec -it takecare_web bash
-
-# Database backup
-docker exec takecare_db mysqldump -u caredb -p@@12raquibi care > backup.sql
-```
+- *
 
 ## 🌐 Pages
 
@@ -200,32 +186,57 @@ Translations stored in:
 
 ## 🚀 Deployment
 
-### Production Checklist
-1. Change database passwords
-2. Update Groq API key
-3. Enable HTTPS
-4. Remove phpMyAdmin service
-5. Set up automated backups
-6. Configure firewall rules
-7. Enable error logging
+### Super Simple with SQLite!
+
+No external database needed! SQLite is perfect for Vercel.
+
+#### Vercel (Recommended)
+```bash
+npm install -g vercel
+vercel login
+vercel
+```
+
+That's it! The database is auto-initialized. ✨
+
+#### Railway (Alternative)
+```bash
+npm install -g @railway/cli
+railway login
+railway init
+railway up
+```
+
+#### Render (Alternative)
+1. Connect your GitHub repository
+2. Select "Web Service"
+3. Deploy
 
 ### Environment Variables
-Create `.env` file:
+
+Only one variable needed:
 ```env
-DB_HOST=your_db_host
-DB_NAME=your_db_name
-DB_USER=your_db_user
-DB_PASSWORD=your_secure_password
 GROQ_API_KEY=your_groq_api_key
 ```
 
-## 📝 License
+Optional:
+```env
+DB_PATH=/custom/path/database.db
+```
 
-This project is private and proprietary.
+### Production Checklist
 
-## 🤝 Support
+1. ✅ Configure GROQ_API_KEY environment variable
+2. ✅ Change admin password (default: admin@gardekids.com / admin123)
+3. ✅ Set up cloud storage for uploads (Cloudinary recommended)
+4. ✅ Configure error logging
+5. ✅ Remove test files from production
+6. ⚠️ **Important:** SQLite on Vercel uses `/tmp` (ephemeral storage)
+   - Data resets after ~15 minutes of inactivity
+   - Perfect for demos and prototypes
+   - For production persistence, see [SQLITE_GUIDE.md](SQLITE_GUIDE.md)
 
-For issues or questions, contact the development team.
+See [QUICKSTART_VERCEL.md](QUICKSTART_VERCEL.md) for detailed deployment guide.
 
 ---
 

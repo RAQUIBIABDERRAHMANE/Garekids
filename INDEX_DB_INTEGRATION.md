@@ -51,7 +51,7 @@ The **index.php** homepage has been updated to dynamically fetch data from the d
 
 **3 Users (Families):**
 1. ABDERRAHMANE RAQUIBI (abdo@gmail.com)
-2. Admin (admin@takecare.com) - Admin account
+2. Admin (admin@gardekids.com) - Admin account
 3. Test User (test@takecare.com)
 
 ### 🚀 How to Use

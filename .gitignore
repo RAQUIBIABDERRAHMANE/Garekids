@@ -1,0 +1,17 @@
+node_modules/
+.vercel
+.env
+.env.local
+.env.*.local
+.DS_Store
+*.log
+.vscode/
+.idea/
+
+# SQLite databases
+db/*.db
+db/*.db-journal
+db/*.db-wal
+db/*.db-shm
+*.sqlite
+*.sqlite3

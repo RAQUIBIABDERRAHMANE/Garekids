@@ -9,9 +9,8 @@ chmod +x generate-admin-password.sh
 # Generate new password hash and update init.sql
 ./generate-admin-password.sh "your_secure_password"
 
-# Then rebuild the database
-docker-compose down -v
-docker-compose up -d
+# Then update your database (local or cloud)
+# Import the updated init.sql to your database
 ```
 
 ## 🔐 Method 2: Manual password generation
@@ -38,42 +37,12 @@ VALUES (
 );
 ```
 
-### Step 3: Recreate the database
-```bash
-docker-compose down -v
-docker-compose up -d
-```
-
-## 🔐 Method 3: Using docker-compose environment variables
-
-### Step 1: Edit docker-compose.yml
-```yaml
-db:
-  environment:
-    ADMIN_NAME: "Your Name"
-    ADMIN_EMAIL: "your.email@example.com"
-    ADMIN_PASSWORD: "your_secure_password"
-```
-
-### Step 2: Update db/init.sql to use environment variables
-The script will automatically hash the password from environment variables.
-
-## 🔐 Method 4: Update via update-admin.sh script (For running containers)
-
-```bash
-# Make script executable
-chmod +x update-admin.sh
-
-# Update admin in running database
-ADMIN_NAME="Your Name" \
-ADMIN_EMAIL="your.email@example.com" \
-ADMIN_PASSWORD="your_secure_password" \
-./update-admin.sh
-```
+### Step 3: Update your database
+Re-import the updated `init.sql` into your database.
 
 ## 📝 Important Notes
 
-- **Default credentials:** admin@takecare.com / admin123
+- **Default credentials:** admin@gardekids.com / admin123
 - Always change default credentials before production deployment
 - Use strong passwords (minimum 12 characters, mix of letters, numbers, symbols)
 - Keep your credentials secure and never commit them to version control
@@ -94,10 +63,15 @@ If you forget your password:
 # Generate new hash
 NEW_HASH=$(php -r "echo password_hash('new_password', PASSWORD_BCRYPT);")
 
-# Update in database
-docker exec -i takecare_db mysql -u caredb -p'@@12raquibi' care <<EOF
-UPDATE users SET password='$NEW_HASH' WHERE email='admin@takecare.com';
+# Update in database (adjust connection details)
+mysql -h your_db_host -u your_user -p your_database <<EOF
+UPDATE users SET password='$NEW_HASH' WHERE email='admin@gardekids.com';
 EOF
+```
+
+Or use your database management tool (phpMyAdmin, PlanetScale Console, etc.) to run:
+```sql
+UPDATE users SET password='$2y$10$YOUR_NEW_HASH_HERE' WHERE email='admin@gardekids.com';
 ```
 
 Or use the update-admin.sh script as shown in Method 4 above.

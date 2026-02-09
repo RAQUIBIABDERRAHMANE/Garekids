@@ -1,0 +1,43 @@
+# Database files
+/db/*.sql
+/db/db.php
+
+# Logs
+/logs/
+*.log
+
+# Environment files
+.env
+.env.*
+
+# Uploads (use cloud storage instead)
+/uploads/
+
+# Development files
+Makefile
+*.sh
+
+# Documentation
+DOCKER_README.md
+SIGNUP_SIGNIN_TEST.md
+INDEX_DB_INTEGRATION.md
+CHATBOT_FEATURES.md
+CHATBOT_QUICKSTART.md
+CHATBOT_README.md
+ADMIN_CREDENTIALS.md
+
+# Test files
+test_*.php
+demo_db.html
+create_test_user.php
+add_sample_data.php
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

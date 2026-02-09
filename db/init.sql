@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS gallery (
 INSERT INTO users (name, email, password, is_admin) 
 VALUES (
     COALESCE(NULLIF(@ADMIN_NAME, ''), 'Admin'),
-    COALESCE(NULLIF(@ADMIN_EMAIL, ''), 'admin@takecare.com'),
+    COALESCE(NULLIF(@ADMIN_EMAIL, ''), 'admin@gardekids.com'),
     '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
     1
 )

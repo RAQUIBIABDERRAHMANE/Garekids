@@ -49,7 +49,7 @@ try {
 echo "<h2>Test 4: Admin User Check</h2>";
 try {
     $stmt = $pdo->prepare("SELECT id, name, email, is_admin FROM users WHERE email = ?");
-    $stmt->execute(['admin@takecare.com']);
+    $stmt->execute(['admin@gardekids.com']);
     $admin = $stmt->fetch();
     if ($admin) {
         echo "✅ Admin user exists:<br>";
@@ -68,7 +68,7 @@ try {
 echo "<h2>Test 5: Password Verification Test</h2>";
 try {
     $stmt = $pdo->prepare("SELECT password FROM users WHERE email = ?");
-    $stmt->execute(['admin@takecare.com']);
+    $stmt->execute(['admin@gardekids.com']);
     $user = $stmt->fetch();
     if ($user) {
         $testPassword = 'admin123';

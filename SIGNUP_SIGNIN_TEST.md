@@ -14,7 +14,7 @@ The database has been configured and is ready for testing.
 ### 👤 Pre-configured Accounts
 
 #### Admin Account
-- **Email**: `admin@takecare.com`
+- **Email**: `admin@gardekids.com`
 - **Password**: `admin123`
 - **Role**: Administrator (can access admin panel)
 
@@ -58,7 +58,7 @@ Visit: `http://your-domain/takecare/signup.php`
 Visit: `http://your-domain/takecare/signin.php`
 
 **Test with Admin**:
-- Email: `admin@takecare.com`
+- Email: `admin@gardekids.com`
 - Password: `admin123`
 - Expected: Redirect to admin panel
 
@@ -130,7 +130,7 @@ Should show: users, testimonials, gallery
 
 ### Password Not Working?
 The default admin password is hashed. Test with:
-- Email: `admin@takecare.com`
+- Email: `admin@gardekids.com`
 - Password: `admin123`
 
 ### Error Messages?
